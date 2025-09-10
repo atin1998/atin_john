@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'practicedemo'
 ]
 
 MIDDLEWARE = [
@@ -73,10 +74,20 @@ WSGI_APPLICATION = 'atin_new.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'helloAtin',  # Name of your MySQL database
+        'USER': 'root',      # MySQL username
+        'PASSWORD': 'hackerrankatin@1990', # MySQL password
+        'HOST': 'localhost',            # Or the IP address/hostname of your MySQL server
+        'PORT': '3306',                 # Default MySQL port
     }
 }
 
